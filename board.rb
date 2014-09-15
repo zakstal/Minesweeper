@@ -1,50 +1,40 @@
 # coding: utf-8
-
-#TODO:
-#@rows = Array.new(3) { Array.new(3,Tile.new) }
 #set bomb count based on size and/or difficulty
-
-
-require_relative 'Tile'
+require 'colorize'
+require_relative 'tile'
+require_relative 'cursor'
 class Board
 
-  attr_accessor :rows, :lost
+  attr_accessor :rows, :lost , :cursor
 
-  def initialize
+  def initialize(cursor = Cursor.new)
     generate_rows
-    # @rows = Array.new(3) { Array.new(3,Tile.new) }
     label_tiles
     @lost = false
+    @cursor = cursor
   end
 
   def generate_rows
-    @rows = Array.new(9) { Array.new(9) }       #be able to put these vals in
-    @rows.each do |row|
-      row.each_index do |i|
-        row[i] = Tile.new
-      end
-    end
+    @rows = Array.new(9) { Array.new(9) {Tile.new} } #want to change vals tho
   end
 
-  def click(mode, pos)
-    case mode
-    when :f
-      switch_flagged(pos) #kina
-    when :r
-      reveal_tile(pos)
-    end
-  end
+  # def click(mode, pos)
+  #   case mode
+  #   when :f
+  #     switch_flagged(pos) #kina
+  #   when :r
+  #     reveal_tile(pos)
+  #   end
+  # end
 
-  def reveal_tile(pos)
+  def reveal_tile(pos = self.cursor.pos)
     raise "spot taken" if revealed?(pos)
     reveal_bombs if bomb?(pos)
     cascade(pos) unless bomb?(pos)
   end
 
-  def switch_flagged(pos)
-    if self[pos].revealed
-      raise "spot taken"
-    end
+  def switch_flagged(pos = self.cursor.pos)
+    raise "spot taken" if self[pos].revealed
     self[pos].set_front( self[pos].front ? nil : :f )
   end
 
@@ -144,25 +134,20 @@ class Board
   end
 
   def render
+    board_chars = []
+    self.rows.each do |row|
+      board_chars << row.map(&:to_s)
+    end
+
+    board_chars[cursor.row][cursor.col] = board_chars[cursor.row][cursor.col].colorize(:light_white)
+    # how is that a color
+
     str = '  '
-    str << "0123456789".split(//)[0...9].join(' ')        #based on width
+    str << FANCY_INTEGERS[0...9].join(' ')        #based on width
     str << "\n"
-    self.rows.each_with_index do |row, y|
-      str << y.to_s << " "
-      row.each do |tile|
-        if tile.revealed
-          if tile.back.nil?
-            icon = '_'
-          elsif tile.back == :b
-            icon = '℻'
-          else
-            icon = tile.back.to_s
-          end
-        else
-          icon = ( tile.front || '*' ).to_s
-        end
-        str << icon << " "
-      end
+    board_chars.each_with_index do |row, y|
+      str << FANCY_INTEGERS[y] << " "
+      str << row.join(' ')
       str << "\n"
     end
     str
@@ -171,4 +156,8 @@ class Board
   def display
     puts render
   end
+
+  # %w(➀ ➁ ➂ ➃ ➄ ➅ ➆ ➇ ➈ ➉) optional font
+
+  FANCY_INTEGERS = %w(❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿)#.map{|n| n.colorize(:light_white)}
 end

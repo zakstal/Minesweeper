@@ -1,0 +1,346 @@
+--- !ruby/object:Game
+board: !ruby/object:Board
+  rows:
+  - - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: 3
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 3
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 3
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: :f
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: :f
+      back: :b
+      revealed: false
+  - - !ruby/object:Tile
+      front: 
+      back: 3
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 3
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: true
+    - !ruby/object:Tile
+      front: :f
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+  - - !ruby/object:Tile
+      front: 
+      back: :b
+      revealed: false
+    - !ruby/object:Tile
+      front: 
+      back: 2
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 
+      revealed: true
+    - !ruby/object:Tile
+      front: 
+      back: 1
+      revealed: true
+    - !ruby/object:Tile
+      front: :f
+      back: :b
+      revealed: false
+  lost: false
+  cursor: &1 !ruby/object:Cursor
+    width: 9
+    height: 9
+    row: 1
+    col: 3
+title_screen: !ruby/object:TitleScreen
+  cursor: !ruby/object:Cursor
+    width: 1
+    height: 5
+    row: 1
+    col: 0
+  options:
+  - - :start
+  - - :save
+  - - :load
+  - - :return
+  - - :exit
+cursor: *1
